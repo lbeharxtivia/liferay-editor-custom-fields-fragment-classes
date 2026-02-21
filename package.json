@@ -1,0 +1,32 @@
+{
+  "name": "@liferay-editor-custom-fields/fragment-classes",
+  "repository": "https://github.com/lbeharxtivia/liferay-editor-custom-fields-fragment-classes",
+  "author": "lbehar@xtivia.com",
+  "license": "MIT",
+  "description": "Easy to access, enumerated classes for fragments",
+  "dependencies": {
+    "@liferay-editor-custom-fields/framework": "^74.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.0.0",
+    "eslint": "^9.0.0",
+    "eslint-webpack-plugin": "^5.0.2",
+    "ts-loader": "9.5.1",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.55.0",
+    "webpack": "5.90.1",
+    "webpack-cli": "5.1.4",
+    "webpack-dev-server": "4.15.1"
+  },
+    "files": [
+    "build"
+  ],
+  "module": "./build/static/index.js",
+  "types": "./build/static/index.d.ts",
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack serve",
+    "watch": "tsc --watch"
+  },
+  "version": "74.0.0"
+}
