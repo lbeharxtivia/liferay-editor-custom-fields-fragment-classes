@@ -1,4 +1,4 @@
-# Liferay Custom Fields Sample
+# Liferay Custom Fields - Fragment Style Classes
 
 Easy to access, enumerated classes for fragments.
 
