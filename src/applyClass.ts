@@ -1,5 +1,5 @@
 import { clickFragmentConfigTab, fragmentConfigLoadingEnd, fragmentConfigLoadingStart, getFieldByLabel, setReactDomInputValue, wait, waitForElement } from '@liferay-editor-custom-fields/framework';
-import { renderClassSelect } from './renderClassList/renderClassSelect';
+import { renderClassSelect } from './renderClassSelect/renderClassSelect';
 
 export const applyClass = async ({ className = "" }: { className: string }) => {
     fragmentConfigLoadingStart();

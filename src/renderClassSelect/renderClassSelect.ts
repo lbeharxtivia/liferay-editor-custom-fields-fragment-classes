@@ -1,9 +1,11 @@
+declare const Liferay;
 import { applyClass } from "../applyClass";
 import { getClassesFromStyles } from "./getClassesFromStyles"
 
 export const renderClassSelect = () => {
     const container = document.querySelector('.page-editor__common-styles.panel-group-sm') as HTMLElement | null;
-    if (container) {
+    if (container && !document.getElementById('liferay-editor-custom-fields-fragment-style-selector') && !Liferay.loadingFragmentStyleSelector) {
+        Liferay.loadingFragmentStyleSelector = true;
         const classes = getClassesFromStyles();
         const wrapper = document.createElement('div');
         wrapper.style.marginBottom = '1rem';
@@ -14,9 +16,8 @@ export const renderClassSelect = () => {
         ${classes.map(style => `<option value="${style}">${style}</option>`).join('')}
       </select>
     `;
-        if (!document.getElementById('liferay-editor-custom-fields-fragment-style-selector')) {
-            container.prepend(wrapper)
-        };
+
+        container.prepend(wrapper)
         const selectElement = wrapper.querySelector('#liferay-editor-custom-fields-fragment-style-selector') as HTMLSelectElement;
         if (selectElement) {
             const fragmentContentEl = document.querySelector('.page-editor__topper.active .page-editor__fragment-content') as HTMLDivElement;
@@ -33,6 +34,7 @@ export const renderClassSelect = () => {
                 applyClass({ className: target?.value })
             });
         }
+        Liferay.loadingFragmentStyleSelector = false;
     }
 };
 

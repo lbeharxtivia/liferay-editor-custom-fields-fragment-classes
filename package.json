@@ -28,5 +28,5 @@
     "start": "webpack serve",
     "watch": "tsc --watch"
   },
-  "version": "74.0.1"
+  "version": "74.0.2"
 }

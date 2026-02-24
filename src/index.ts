@@ -1,7 +1,7 @@
 declare const Liferay;
 
 import initFramework from '@liferay-editor-custom-fields/framework';
-import { renderClassSelect } from './renderClassList/renderClassSelect';
+import { renderClassSelect } from './renderClassSelect/renderClassSelect';
 
 const init: () => void = () => {
     console.log('init');
