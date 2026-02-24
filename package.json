@@ -5,7 +5,7 @@
   "license": "MIT",
   "description": "Easy to access, enumerated classes for fragments",
   "dependencies": {
-    "@liferay-editor-custom-fields/framework": "^74.1.0"
+    "@liferay-editor-custom-fields/framework": "^26.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.0.0",
@@ -28,5 +28,5 @@
     "start": "webpack serve",
     "watch": "tsc --watch"
   },
-  "version": "74.0.2"
+  "version": "26.0.0"
 }
