@@ -14,13 +14,15 @@ export const renderClassSelect = () => {
         ${classes.map(style => `<option value="${style}">${style}</option>`).join('')}
       </select>
     `;
-        container.prepend(wrapper);
+        if (!document.getElementById('liferay-editor-custom-fields-fragment-style-selector')) {
+            container.prepend(wrapper)
+        };
         const selectElement = wrapper.querySelector('#liferay-editor-custom-fields-fragment-style-selector') as HTMLSelectElement;
         if (selectElement) {
             const fragmentContentEl = document.querySelector('.page-editor__topper.active .page-editor__fragment-content') as HTMLDivElement;
             if (fragmentContentEl.classList) {
                 const selectedClass = Array.from(fragmentContentEl.classList).find(className => className.includes('fragment-style-'));
-                if(selectedClass) {
+                if (selectedClass) {
                     const selectedItem = selectedClass.replace('fragment-style-', '');
                     selectElement.value = selectedItem;
                 }

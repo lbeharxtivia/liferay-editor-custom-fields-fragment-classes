@@ -15,7 +15,6 @@ export const applyClass = async ({ className = "" }: { className: string }) => {
         await wait(50);
     }
     
-
     // If classname exists, enter the selected class. Sometimes there's no class and that's okay.
     if (className) {
         const classInput = getFieldByLabel('CSS Classes');
@@ -34,5 +33,4 @@ export const applyClass = async ({ className = "" }: { className: string }) => {
     }
 
     fragmentConfigLoadingEnd();
-    
 }
