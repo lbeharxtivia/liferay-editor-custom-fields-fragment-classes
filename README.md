@@ -2,6 +2,17 @@
 
 Easy to access, enumerated classes for fragments.
 
+## Supported Liferay Versions
+This app supports DXP versions in their premium support phase at the time of this release.
+- 2025 Q4
+- 2025 Q3
+- 2025 Q2
+- 2025 Q1
+- 2024 Q1
+- 7.4
+
+If you need compatibility for older DXP releases, you can create a legacy version with a year that supports the release, and submit a PR.
+
 ## Getting Started
 
 This is meant to be imported into a client extension. Since this is the first app using the framework, it's already included as an example.
